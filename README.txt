@@ -9,7 +9,7 @@ He investigado un poco sobre el tema de GitHub y todo eso (en vez de estudiar) y
 no nos sobra el tiempo.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-1. INICIALIZACIÓN:
+1. INICIALIZACIÓN: clone.
 
 Supongo que todos tenemos GitBash debido a FTR. Si estais leyendo esto es porque os he agregado a colaborar en un repositorio remoto en GitHub. Para empezar a trabajar
 necesitaremos "clonar" el repositorio remoto a nuestro ordenador. En GitHub, dad al boton verde "code" y copiad la dirección HTTPS que os proporciona. Esa es la URL
@@ -17,6 +17,7 @@ del repositorio remoto.
 
 A continuación abrid Git Bash y situaos en el directorio donde querais montar vuestro repositorio local. Clonad el respositorio local usando "git clone [URL rep. remoto]".
 Con esto ya lo tenéis.
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 2. USO Y FUNCIONAMIENTO DEL REPOSITORIO LOCAL: add, commit, status.
 
@@ -44,4 +45,22 @@ Mantengamoslo simple, como he dicho antes, git usa punteros que apuntan a los es
 cambia respecto al local de vuestro ordenador, pero queréis trabajar sobre lo que hay en el remoto. Con "git fetch origin" sincronizamos los punteros de nuestro repositorio
 local con el del el remoto, "origin" es un alias para el repositorio remoto que nos interesa (por defecto coge ese, pero no viene mal ponerlo). Cabe destacar que 
 actualizamos los DATOS, no el CONTENIDO de nuestro repositorio local (porque lo que hay en el remoto no tiene por qué ser lo mismo que en el local). Para incluir los cambios
-del repositorio remoto al local usamos "git merge". Con esto incluimos (fusionamos) en contenido del repositorio remoto al nuestro local.
+del repositorio remoto al local usamos "git merge". Con esto Git compara el estado del repositorio local con el de el remoto y hace que queden iguales usando la información
+de estado. Si por ejemplo hay un fichero que ha sido modificado, Git se encarga de hacer los cambios necesarios para que queden iguales.
+
+"git pull origin" se encarga de hacer fetcht y merge de seguido, simplificando el proceso. A modo explicaivo dejo el siguiente esquema:
+
+ 	  A---B---C master on origin <-versiones (commits) en el repositorio remoto de GitHub.
+	 /
+    D---E---F---G master <-versiones (commits) en el repositorio local de tu ordenador.
+
+Si hacemos "git pull origin" en nuestro repositorio local aparecía la versión H en nuestro repositorio local.
+
+	  A---B---C origin/master
+	 /         \
+    D---E---F---G---H master
+
+
+Ahora imaginemos que hemos trabajado en nuestro repositorio local y queremos incorporar los cambios al remoto. "git push origin" manda todos nuestros commits al repisotorio remoto
+para que este alcance el mismo estado que el nuestro (el local). Si miramos las cosas desde el lado del servidor, es como si el repositorio remoto se sincronizara con el nuestro (fetch)
+y luego se igualaran (merge). Al hacerlo en GitHub, aparecerá en la pestaña de "pull requests" el push que hemos hecho nosotros.
