@@ -1,0 +1,47 @@
+# ProyectoLDST
+Proyecto para asignatura LDST
+
+No se si llegaremos a usar esto pero creo que si lo mantenemos simple podría llegar a valer. No nos han dado mucho tiempo y encima por 
+la situación parece que cada vez es más dificil quedar. Con esto podemos ir haciendo cada uno nuestra contribución de forma asíncrona según tengamos tiempo. A parte
+como la que yo me se va a estar un rato confinada (o no) nos puede facilitar las cosas.
+
+He investigado un poco sobre el tema de GitHub y todo eso (en vez de estudiar) y voy a dejar aquí una serie de indicaciones. Siempre manteniendolo simple, pues
+no nos sobra el tiempo.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+1. INICIALIZACIÓN:
+
+Supongo que todos tenemos GitBash debido a FTR. Si estais leyendo esto es porque os he agregado a colaborar en un repositorio remoto en GitHub. Para empezar a trabajar
+necesitaremos "clonar" el repositorio remoto a nuestro ordenador. En GitHub, dad al boton verde "code" y copiad la dirección HTTPS que os proporciona. Esa es la URL
+del repositorio remoto.
+
+A continuación abrid Git Bash y situaos en el directorio donde querais montar vuestro repositorio local. Clonad el respositorio local usando "git clone [URL rep. remoto]".
+Con esto ya lo tenéis.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+2. USO Y FUNCIONAMIENTO DEL REPOSITORIO LOCAL: add, commit, status.
+
+En nuestro repositorio local podemos hacer lo que queramos. Crear nuevas carpetas, ficheros, imágenes. Podemos cambiar el código y realizar nuestras pruebas agusto.
+Si usáis "git status" podéis ver el estado de las ficheros y directorios de vuestro repositorio local, veréis que los ficheros que habéis cambiado están en rojo y pone algo del tipo
+"modified".
+
+Git usa una serie de punteros que apuntan a los estados del repositorios remoto y local en distintos instantes de tiempo. De esta forma se puede llevar un control 
+sobre cuáles son las diferencias entre lo que hay en lo remoto (GitHub) y en lo local (nuestro ordenador). Al hacer cambios en nuestro repositorio local, Git 
+detecta que lo que hay en el respositorio local actualmente no es lo mismo que lo que indica el estado de ese mismo repositorio (se ha modificado x fichero, hay nuevos
+directorios, etc).
+
+Con "git add [fichero/directorio]" pasamos los ficheros que hayamos modificado a una fase de "staging". De esta forma indicamos a Git que estos ficheros se han modificado
+y que estamos preparandonos para un nuevo "commit" (haciendo un git status se puede ver como los ficheros en los que ponía "modified" han pasado a "ready to commit"). 
+Hacer "commit" se basa en cambiar el estado del repositorio local a lo que tenemos en este actualmente, es decir, cambiar el contenido del puntero de estado. 
+Esto lo hacemos con "git commit -m ["mensaje explicativo"]", -m es un parámetro opcinional, pero si poneís que habéis modificadonos ahorramos muchos quebraderos de cabeza. 
+Con esto hemos actualizamos nuestro repositorio local e incluso podemos volver a commits anteriores si queremos (estados anteriores del repositorio).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+3. USO Y FUNCIONAMIENTO DEL REPOSITORIO REMOTO: fetch, merge, pull ,push.
+
+Toda la parafernalia del punto anterior se refiere únicamente a nuestro repositorio local. ¿Qué pasa con el remoto?
+
+Mantengamoslo simple, como he dicho antes, git usa punteros que apuntan a los estado del repositorio local y remoto. Imaginemos por ejemplo, que el repositorio remoto
+cambia respecto al local de vuestro ordenador, pero queréis trabajar sobre lo que hay en el remoto. Con "git fetch origin" sincronizamos los punteros de nuestro repositorio
+local con el del el remoto, "origin" es un alias para el repositorio remoto que nos interesa (por defecto coge ese, pero no viene mal ponerlo). Cabe destacar que 
+actualizamos los DATOS, no el CONTENIDO de nuestro repositorio local (porque lo que hay en el remoto no tiene por qué ser lo mismo que en el local). Para incluir los cambios
+del repositorio remoto al local usamos "git merge". Con esto incluimos (fusionamos) en contenido del repositorio remoto al nuestro local.
