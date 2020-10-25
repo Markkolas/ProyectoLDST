@@ -91,7 +91,7 @@ En conclusión:
 
 IMPORTANTE:
 
-	->Usar con frecuencia "git status" y "git log" pues dan mucha info de lo que está pasando.
+	->Usar con frecuencia "git status", "git log" y "git remote show origin" pues dan mucha info de lo que está pasando.
 
 	->Este enlace está to rico: https://git-scm.com/book/en/v2
 
