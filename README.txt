@@ -87,7 +87,7 @@ En conclusión:
 	->Para igualar estado del repositorio remoto al tuyo local (subir tus cambios) usa "git push origin".
 
 	->Para igualar estado del repositorio local al de el remoto (bajar cambios) usa "git pull origin" o "git fetch" seguido de "git merge". 
-	  NOTA: Es buena 
+	  NOTA: Es buena idea usar con frecuencia git fetch para sincronizar los datos del repositorio local con el de el remoto. 
 
 IMPORTANTE:
 

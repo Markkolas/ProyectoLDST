@@ -1,0 +1,42 @@
+html{background-color: deepskyblue}
+
+body{margin: auto}
+
+.flexInicio{ /*estilo del contenedor flex para la barra de inicio*/
+  display: flex;
+  flex-flow: row;
+
+  background-color: lightblue;
+  min-height: 50px;
+  font-size: medium;
+  padding-bottom: 2px;
+}
+
+.flexInicio > div#cabecera{ /*estilo div (nombre de pagina) del flex de la barra de inicio*/
+  flex: 2 1 auto;
+  margin: 0;
+
+  text-align: center;
+  font-family: Verdana;
+
+  cursor: pointer; /*aparece mano de selección cuando se pone el raton encima*/
+}
+
+.flexInicio > div#boton1, div#boton2, div#boton3{ /*estilo divs (padres de botones) del flex de la barra de inicio*/
+  flex: 1 1 auto;
+  margin: 2px;
+  background-color: gray;
+  font-size: 30px;
+  font-family: helvetica;
+  border-radius: 6px;
+  border: 2px solid #85929E;
+}
+
+.botoninicio{ /*estilo de los botones de la barra de inicia*/
+  width: 100%;
+  height: 100%;
+  margin: 3px;
+  border-radius: 6px;
+  border-style: hidden;
+  cursor: pointer;
+}
