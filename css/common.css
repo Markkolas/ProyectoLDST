@@ -1,4 +1,4 @@
-html{background-color: deepskyblue}
+html{background-color: #FFC989}
 
 body{margin: auto}
 
@@ -33,10 +33,16 @@ body{margin: auto}
 }
 
 .botoninicio{ /*estilo de los botones de la barra de inicia*/
-  width: 100%;
+  width: 99%;
   height: 100%;
   margin: 3px;
   border-radius: 6px;
   border-style: hidden;
   cursor: pointer;
+}
+.parraf{
+  background-color: white;
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
