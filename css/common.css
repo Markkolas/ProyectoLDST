@@ -1,12 +1,14 @@
 html{background-color: #FFC989}
 
-body{margin: auto}
+body{margin: 0}
 
 .flexInicio{ /*estilo del contenedor flex para la barra de inicio*/
   display: flex;
   flex-flow: row;
 
+  margin: 0px;
   background-color: lightblue;
+  width: 100%;
   min-height: 50px;
   font-size: medium;
   padding-bottom: 2px;
