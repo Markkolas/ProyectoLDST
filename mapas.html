@@ -5,18 +5,34 @@
   <link rel="stylesheet" type="text/css" href="./css/common.css">
 
   <style>
-    #collecion_planos{
-      height: 350px;
+    .contenedorImagenes{
+      display: flex;
+      flex-flow: row;
+
       width: 100%;
-      margin: 5px;
+      height: 400px;
     }
-    #collecion_planos > img{
-      float: left;
+
+    .contenedorImagenes > div{
+      flex: 1;
+      margin: 2px;
+      text-align: center;
+    }
+
+    .contenedorImagenes > div > img{
+      width: 100%;
       height: 100%;
-      width: 33%;
+      margin: 0px;
+    }
+
+    span{
+      position: relative;
+      left:40%;
     }
   </style>
 </head>
+
+<script src="./scripts/cambiarMapas.js"></script>
 
 <body>
   <div class="flexInicio">
@@ -41,12 +57,17 @@
     </div>
   </div>
 
-  <div><h4>El edificio consta de 3 plantas y alberga a las escuelas de ingenieros de informática y telecomunicaciones tal como se muestra a continuacion:</h4></div>
+  <div><h4>El edificio consta de 3 plantas y alberga a las escuelas de ingenieros de informática y telecomunicaciones tal como se muestra a continuación:</h4></div>
 
-  <div id="collecion_planos">
-    <img src="./images/edificio_baja_teleco.jpg">
-    <img src="./images/edificio_primera_teleco.jpg">
-    <img src="./images/edificio_segunda_teleco.jpg">
+  <span>
+    <button type="button" title="Cambiar a planos referentes a telecomunicaciones" onclick="mostrarPlanosTeleco()">Telecomunicaciones</button>
+    <button type="button" title="Cambiar a planos referentes a informatica" onclick="mostrarPlanosInfo()">Informatica</button>
+  </span>
+
+  <div class="contenedorImagenes">
+    <script defer>
+      mostrarPlanosTeleco();
+    </script>
   </div>
 
 </body>
