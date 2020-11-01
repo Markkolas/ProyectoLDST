@@ -35,7 +35,7 @@ body{margin: 0}
 }
 
 .botoninicio{ /*estilo de los botones de la barra de inicia*/
-  width: 99%;
+  width: 99%; /*NO CAMBIAR resuelve el problema de la barra lateral*/
   height: 100%;
   margin: 3px;
   border-radius: 6px;

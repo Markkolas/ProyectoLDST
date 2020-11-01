@@ -25,9 +25,9 @@
       margin: 0px;
     }
 
-    span{
-      position: relative;
-      left:40%;
+    #cambiador{
+      text-align: center;
+      min-height: 30px;
     }
   </style>
 </head>
@@ -59,10 +59,10 @@
 
   <div><h4>El edificio consta de 3 plantas y alberga a las escuelas de ingenieros de informática y telecomunicaciones tal como se muestra a continuación:</h4></div>
 
-  <span>
-    <button type="button" title="Cambiar a planos referentes a telecomunicaciones" onclick="mostrarPlanosTeleco()">Telecomunicaciones</button>
-    <button type="button" title="Cambiar a planos referentes a informatica" onclick="mostrarPlanosInfo()">Informatica</button>
-  </span>
+  <div id="cambiador">
+    <span><button type="button" title="Cambiar a planos referentes a telecomunicaciones" onclick="mostrarPlanosTeleco()">Telecomunicaciones</button></span>
+    <span><button type="button" title="Cambiar a planos referentes a informatica" onclick="mostrarPlanosInfo()">Informatica</button></span>
+  </div>
 
   <div class="contenedorImagenes">
     <script defer>
