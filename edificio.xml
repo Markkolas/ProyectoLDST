@@ -1,0 +1,74 @@
+<edificio>
+<plantas>
+  <piso>PLANTA BAJA</piso>
+  <piso>PRIMERA PLANTA</piso>
+  <piso>SEGUNDA PLANTA</piso>
+</plantas>
+
+<aulas-primera-planta>
+  <aula>A001</aula>
+  <aula>A002</aula>
+  <aula>A003</aula>
+  <aula>A004</aula>
+  <aula>A005</aula>
+  <aula>A006</aula>
+  <aula>A007</aula>
+  <aula>A009</aula>
+  <aula>A010</aula>
+  <aula>A011</aula>
+  <aula>A012</aula>
+  <aula>A013</aula>
+  <aula>A014</aula>
+  <aula>A015</aula>
+  <aula>A016</aula>
+</aulas-primera-planta>
+
+<aulas-segunda-planta>
+  <aula>A101</aula>
+  <aula>A102</aula>
+  <aula>A103</aula>
+  <aula>A104</aula>
+  <aula>A105</aula>
+  <aula>A106</aula>
+  <aula>A107</aula>
+  <aula>A108</aula>
+  <aula>A109</aula>
+  <aula>A110</aula>
+</aulas-segunda-planta>
+
+<aulas-especiales>
+  <aula>I+D</aula>
+  <aula>SALA DE LECTURA</aula>
+  <aula>AULA HEDY LAMARR</aula>
+  <aula>SALON DE GRADOS</aula>
+</aulas-especiales>
+
+<laboratorios-primera-planta>
+  <lab>1L001</lab>
+  <lab>1L002</lab>
+  <lab>1L003</lab>
+  <lab>1L004</lab>
+  <lab>1L005</lab>
+  <lab>1L006</lab>
+  <lab>1L007 (LABORATORIO DE ELECTRONICA)</lab>
+  <lab>1L013</lab>
+  <lab>1L018</lab>
+  <lab>1L019</lab>
+  <lab>1L020</lab>
+  <lab>1L023</lab>
+</laboratorios-primera-planta>
+
+<laboratorios-segunda-planta>
+  <lab>2L001</lab>
+  <lab>2L002</lab>
+  <lab>2L003</lab>
+  <lab>2L004</lab>
+  <lab>2L005</lab>
+  <lab>2L006</lab>
+  <lab>2L007</lab>
+  <lab>2L008</lab>
+  <lab>2L009</lab>
+  <lab>2L0010</lab>
+</laborarios-segunda-planta>
+
+</edificio>
