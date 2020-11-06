@@ -10,8 +10,14 @@ footer{
   width: 100%;
   text-align: center;
   font: 15px Verdana;
+  background-color: #808080;
 }
-
+#cuerpo{
+  margin:0px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row;
+}
 :focus{
   outline: 2px solid black; /*se remarcan objetos al pulsar tab (solo funciona con algunos objetos)*/
 }
@@ -56,9 +62,54 @@ footer{
   border-style: hidden;
   cursor: pointer;
 }
+.botoninicio:hover{
+  width: 99%; /*NO CAMBIAR resuelve el problema de la barra lateral*/
+  height: 100%;
+  margin: 3px;
+  border-radius: 6px;
+  border-style: hidden;
+  cursor: pointer;
+  color: #008080;
+}
 .parraf{
   background-color: white;
   position: relative;
   width: 100%;
   text-align: center;
+}
+#cuerpo > flexContenedorPrincipal{ /*estilo del contenedor flex para el contenedor principal de la pagina*/
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  background-color: white;
+  width: 60%
+  position: relative;
+  flex: 1 0 60%
+  order: 2;
+}
+#cuerpo > flexIzquierda{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  max-height: 200px;
+  width: 20%
+  position: relative;
+  flex: 1 0 20%
+  order: 1;
+}
+#cuerpo > flexDerecha{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  max-height: 200px;
+  width: 20%
+  position: relative;
+  flex: 1 0 20%
+  order: 3;
 }
