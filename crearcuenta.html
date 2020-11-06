@@ -20,7 +20,7 @@
     text-align: center;
   }
   .contenedor{
-        display:none;
+  display: none;
   }
 
   .elem {
@@ -36,7 +36,9 @@
 }
   select {
     margin-top:10px;
-      margin-bottom:10px;
+    margin-bottom:10px;
+    font-size: 14px;
+    font-family: sans-serif;
   }
   input.invalid {
   background-color: #FFC989;
@@ -154,11 +156,9 @@
 </div><br>
 <div>
   <div id="botonpeq" style="float:right;">
-    <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="font-family:sans-serif;">Anterior</button>
-    <button type="button" id="nextBtn" onclick="nextPrev(1)" style="font-family:sans-serif;">Siguiente</button>
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="font-family:sans-serif;font-size:14px;">Anterior</button>
+    <button type="button" id="nextBtn" onclick="nextPrev(1)" style="font-family:sans-serif;font-size:14px;">Siguiente</button>
   </div>
-</div>
-</form>
 
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -179,6 +179,7 @@ function showTab(n) {
   } else {
     document.getElementById("nextBtn").innerHTML = "Siguiente";
   }
+
 }
 
 function nextPrev(n) {
@@ -193,7 +194,7 @@ function nextPrev(n) {
   // if you have reached the end of the form...
   if (currentTab >= x.length) {
     // ... the form gets submitted:
-    document.getElementById("regForm").submit();
+    document.getElementById("formulario").submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -220,7 +221,6 @@ function validateForm() {
 }
 
 </script>
-
 
 </body>
 </html>
