@@ -5,7 +5,12 @@
   <title>Informacion</title>
   <link rel="stylesheet" type="text/css" href="./css/common.css">
 </head>
-
+<style>
+  @media all and (max-width:800px){
+    #cuerpo > flexDerecha {display: none;}
+    #cuerpo > flexIzquierda {display: none;}
+  }
+</style>
 <body>
   <div class="flexInicio">
     <div id="cabecera" onclick="document.location='./principal.html'" title="Vuelve a la pagina principal"><h1><i>TeleCovid</i></h1></div>
@@ -28,9 +33,10 @@
       </button>
     </div>
   </div>
+  <div class="contenedorBody">
   <div id="cuerpo">
     <flexIzquierda><img src = "./images/logoUVa.png" width="285" height="200"></flexIzquierda>
-    <flexContenedorPrincipal>
+    <flexContenedorPrincipal style="contenedorflex">
       <p class= "parraf">
         <b><big>INFORMACIÓN Y PROTOCOLOS COVID-19</big></b><br/>
         Visita regularmente la pagina de la <a href="https://www.uva.es/export/sites/uva/">UVa </a> y de tu la <a href="https://www.tel.uva.es/">etsit</a> para obtener
@@ -102,6 +108,7 @@
     </flexContenedorPrincipal>
     <flexDerecha><img src = "./images/logoEscuela.jpg" width="285" height="200"></flexDerecha>
   </div>
+</div>
   <footer>
     <p><i>Autores: Marco Antonio Villa, María Martinez y Rubén Serrano<br/></br>
     Gran parte de los recursos utilizados (enlaces, imágenes, etc) en está página se han obtenido de diversos portales y/o páginas web de la UVA.

@@ -73,7 +73,6 @@ footer{
 }
 .parraf{
   background-color: white;
-  position: relative;
   width: 100%;
   text-align: center;
 }
@@ -85,7 +84,6 @@ footer{
   margin: 0px;
   background-color: white;
   width: 60%
-  position: relative;
   flex: 1 0 60%
   order: 2;
 }
@@ -97,7 +95,6 @@ footer{
   margin: 0px;
   max-height: 200px;
   width: 20%
-  position: relative;
   flex: 1 0 20%
   order: 1;
 }
@@ -109,7 +106,6 @@ footer{
   margin: 0px;
   max-height: 200px;
   width: 20%
-  position: relative;
   flex: 1 0 20%
   order: 3;
 }
