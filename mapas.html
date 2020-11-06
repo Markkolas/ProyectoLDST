@@ -65,6 +65,17 @@
       text-align: center;
       min-height: 30px;
     }
+
+    @media all and (max-width:640px){
+      .contenedorImagenes{
+        flex-flow: column;
+        min-height: 1600px; /*para evitar que se monte encima del contenido del abajo*/
+      }
+
+      .contenedorImagenes > div{
+        margin-top: 30px;
+      }
+    }
   </style>
 </head>
 
@@ -184,6 +195,12 @@
       <div><a href="./pdfs/telecoinformatica-33.pdf" target="_blanck">PDF</a></div>
     </div>
   </div>
+
+  <footer>
+    <p><i>Autores: Marco Antonio Villa, María Martinez y Rubén Serrano<br/></br>
+    Gran parte de los recursos utilizados (enlaces, imágenes, etc) en está página se han obtenido de diversos portales y/o páginas web de la UVA.
+  </i></p>
+  </footer>
 
 </body>
 </html>
