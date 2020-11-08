@@ -46,7 +46,9 @@
   </style>
 </head>
 
-<body>
+<script src="./scripts/pasarPaginaCuenta.js"></script>
+
+<body onload="mostrarTab(0)">
   <div class="flexInicio">
     <div id="cabecera" onclick="document.location='./principal.html'" onClick="document.location='./principal.html'"  title="Vuelve a la pagina principal"><h1><i>TeleCovid</i></h1></div>
 
@@ -148,7 +150,7 @@
     <label for="aulas">Aulas atendidas*</label><br>
     <input type="aulas" id="aulas" name="aulas"><br>
   </div><br>
-      <div class="elem" style="color:red;">*Responder solo si se ha escogido como metodo de docencia presencial o mixto</div><br>
+      <div class="elem" style="color:red;">*Poner un 0 en caso de no presencial</div><br>
     <div class="elem">
     <label><input type="checkbox" name="terms" checked="true">He leído y acepto los <u>términos y condiciones de uso</u></label><br>
   </div><br>
@@ -158,53 +160,5 @@
     <button type="button" id="prevBtn" onclick="siguienteAnterior(-1)" style="font-family:sans-serif;font-size:14px;">Anterior</button>
     <button type="button" id="nextBtn" onclick="siguienteAnterior(1)" style="font-family:sans-serif;font-size:14px;">Siguiente</button>
   </div>
-
-<script>
-var currentTab = 0;
-mostrarTab(currentTab);
-
-function mostrarTab(n) {
-  var x = document.getElementsByClassName("contenedor");
-  x[n].style.display = "block";
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Crear Cuenta";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Siguiente";
-  }
-}
-
-function siguienteAnterior(n) {
-  var x = document.getElementsByClassName("contenedor");
-  if (n == 1 && !validarForm()) return false;
-  x[currentTab].style.display = "none";
-  currentTab = currentTab + n;
-  if (currentTab >= x.length) {
-    document.getElementById("formulario").submit();
-    return false;
-  }
-  mostrarTab(currentTab);
-}
-
-function validarForm() {
-  var x, y, i, valido = true;
-  x = document.getElementsByClassName("contenedor");
-  y = x[currentTab].getElementsByTagName("input");
-  for (i = 0; i < y.length; i++) {
-    if (y[i].value == "") {
-      y[i].className += " invalid";
-      valido = false;
-    }
-  }
-  return valido;
-}
-
-
-</script>
-
 </body>
 </html>
