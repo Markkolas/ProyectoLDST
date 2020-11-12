@@ -5,14 +5,14 @@ body{
   min-height: 100%;
 }
 
-footer{
+footer{ /*Estilo del footer*/
   margin-top: 100px;
   width: 100%;
   text-align: center;
   font: 15px Verdana;
   background-color: #808080;
 }
-#cuerpo{
+#cuerpo{ /*Estilo usado en el div de info.html que contiene el texto*/
   margin:0px;
   padding: 0px;
   display: flex;
@@ -55,7 +55,7 @@ footer{
 }
 
 .botoninicio{ /*estilo de los botones de la barra de inicia*/
-  width: 99%; /*NO CAMBIAR resuelve el problema de la barra lateral*/
+  width: 99%; /*Poniendolo al 100% la página se descuadra un poco y aparece un scroll horizontal muy pequeño pero molesto, al 99% funciona bien*/
   height: 100%;
   margin: 3px;
   border-radius: 6px;
@@ -63,20 +63,14 @@ footer{
   cursor: pointer;
 }
 .botoninicio:hover{
-  width: 99%; /*NO CAMBIAR resuelve el problema de la barra lateral*/
-  height: 100%;
-  margin: 3px;
-  border-radius: 6px;
-  border-style: hidden;
-  cursor: pointer;
   color: #008080;
 }
-.parraf{
+.parraf{ /*estilo usado en divs de info.html para dividir texto*/
   background-color: white;
   width: 100%;
   text-align: center;
 }
-#cuerpo > flexContenedorPrincipal{ /*estilo del contenedor flex para el contenedor principal de la pagina*/
+#cuerpo > flexContenedorPrincipal{ /*estilo del contenedor flex central con texto para info.html*/
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -87,7 +81,7 @@ footer{
   flex: 1 0 60%
   order: 2;
 }
-#cuerpo > flexIzquierda{
+#cuerpo > flexIzquierda{ /*estilo del contenedor flex izquierdo con imagen para info.html*/
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -98,7 +92,7 @@ footer{
   flex: 1 0 20%
   order: 1;
 }
-#cuerpo > flexDerecha{
+#cuerpo > flexDerecha{ /*estilo del contenedor flex derecho con imagen para info.html*/
   display: flex;
   flex-flow: column;
   justify-content: center;

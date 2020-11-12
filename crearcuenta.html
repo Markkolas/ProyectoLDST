@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Registro</title>
+  <title>TeleCovid | Registro</title>
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <style>
 
-  #formulario{
+  #formulario{ /*Estilo del formulario de creación de cuenta*/
       background-color: white;
       font-family: sans-serif;
       font-size: 16px;
@@ -15,6 +15,9 @@
       border: 2px outset black;
       min-width:200px;
   }
+  #botonpeq{ /*Estilo contenedor de botones*/
+    float:right;
+  }
   h2{
     text-align: center;
   }
@@ -22,33 +25,35 @@
   display: none;
   }
 
-  .elem {
+  .elem { /*Estilo de elementos en el formulario*/
     margin-left: 20px;
     margin-top: 3px;
     margin-bottom:3px;
   }
+
   input {
   padding:2px;
   font-size: 14px;
   font-family: sans-serif;
   border: 1px solid #aaaaaa;
-}
+
+  }
   select {
     margin-top:10px;
     margin-bottom:10px;
     font-size: 14px;
     font-family: sans-serif;
   }
-  input.invalid {
+  input.invalid {/* Estilo aplicado cuando se introduce un dato incorrecto*/
   background-color: #FFC989;
- }
+  }
 
   </style>
 </head>
 
 <script src="./scripts/pasarPaginaCuenta.js"></script>
 
-<body onload="mostrarTab(0)">
+<body onload="mostrarTab(0)"><!--mostratTab se encarga de mostrar solo los botones necesarios-->
   <div class="flexInicio">
     <div id="cabecera" onclick="document.location='./principal.html'" onClick="document.location='./principal.html'"  title="Vuelve a la pagina principal"><h1><i>TeleCovid</i></h1></div>
 
@@ -141,7 +146,7 @@
     <div class="elem">
     <label for="horario">Horario</label>
     <select id="horario" name="horario">
-        <option value="manana" selected>Ma&ntildeana</option>
+        <option value="manana" selected>Mañana</option>
         <option value="tarde">Tarde</option>
         <option value="ambos">Ambos</option>
     </select><br>
@@ -156,7 +161,7 @@
   </div><br>
 </div><br>
 <div>
-  <div id="botonpeq" style="float:right;">
+  <div id="botonpeq">
     <button type="button" id="prevBtn" onclick="siguienteAnterior(-1)" style="font-family:sans-serif;font-size:14px;">Anterior</button>
     <button type="button" id="nextBtn" onclick="siguienteAnterior(1)" style="font-family:sans-serif;font-size:14px;">Siguiente</button>
   </div>

@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--diversos metadatos de la página principal-->
   <meta charset="utf-8">
   <meta name = "author" content="María Martínez Ordás, Rubén Serrano Rodríguez, Marco Villa Aparicio">
   <meta name = "organization" content="Escuela Técnica Superior de Ingenieros de Telecomunicación, Universidad de Valladolid">
-  <title>TeleCovid</title>
+  <meta name="keywords" lang="es" content="Covid ETSIT, Informacion covid ETSIT, gestion sanitaria UVA, TeleCovid">
+  <title>TeleCovid | Ayuda para gestión de Covid-19 en ETSIT UVA</title>
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <style>
-  img {
-    width: 60%;
-  }
-  #centro {
+  #centro { /*Estilo del texto bienvenida pagina principal*/
         font-size: 40px;
         text-align: center;
         margin-top: 10px;
         margin-bottom:40px;
   }
 
-  .contenedorflex{
+  .contenedorflex{ /*Estilo contenedor flexbox para imagen y frame*/
     display: flex;
     flex-flow: row;
     margin: auto;
@@ -25,37 +24,37 @@
     min-height: 500px;
   }
 
-  .contenedorflex > div{
+  .contenedorflex > div{ /*Estilo elementos del flexbox en general*/
     margin: 2px;
     height: 500px;
     width: 100%;
     text-align: center;
   }
-  .contenedorflex >div >img{
+  .contenedorflex >div >img{ /*Estilo concreto para la imagen*/
     border: 3px solid black;
     height: inherit;
     width: inherit;
   }
-  .contenedorflex >div > iframe{
+  .contenedorflex >div > iframe{ /*Estilo concreto para el frame*/
     border: 3px solid black;
     height: inherit;
     width: inherit;
   }
-  .contenedorflex > #contenedorImagen{
+  .contenedorflex > #contenedorImagen{/*Estilo para el elemento del flexbox que contiene la imagen*/
     flex: 2 1 40%;;
   }
 
-  .contenedorflex > #contenedorFrame{
+  .contenedorflex > #contenedorFrame{/*Estilo para el elemento del flexbox que contiene el frame*/
     flex: 1 1 60%;
   }
 
-  .contenedorgrid {
+  .contenedorgrid { /*Estilo del grid de la pagina principal*/
     display:grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 50px;
     margin: 2px
   }
-  .elemgrid {
+  .elemgrid { /*Estilo de cada elemento del grid*/
     font-family: Verdana;
     background-color:rgb(240, 240, 240);
     padding: 20px;
@@ -64,7 +63,7 @@
     text-align: center;
     pointer-events: none; /*formazos que no se vea afectado al poner el cursor encima del elemento*/
   }
-  .elemgrid > a {
+  .elemgrid > a { /*Estilo enlaces en el grid*/
     text-decoration: none;
     color:black;
     pointer-events: auto; /*dejamos que el hijo dentro se vea afectado*/
@@ -74,7 +73,7 @@
     background: lightgrey; /*cuando el hijo se ve afectado, tambíen lo hace el padre*/
   }
 
-  @media all and (max-width:640px){
+  @media all and (max-width:640px){/*estilo para responsividad*/
     .contenedorgrid{
       grid-template-columns: 100%; /*forzamos a que se vea todo como una columna*/
     }

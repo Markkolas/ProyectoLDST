@@ -1,4 +1,4 @@
-function loadEnlacesXML(){
+function loadEnlacesXML(){//funcion para realizar la petición AJAX
   var xmlEnlaces = new XMLHttpRequest();
   xmlEnlaces.onreadystatechange = function(){
     if(xmlEnlaces.readyState == 4 && xmlEnlaces.status == 200){
@@ -9,7 +9,7 @@ function loadEnlacesXML(){
   xmlEnlaces.send();
 }
 
-function mostrarEnlaces(xmlEnlaces){
+function mostrarEnlaces(xmlEnlaces){//funcion para mostrar contenido en el documento HTML
   var i;
   var xmlDocumento = xmlEnlaces.responseXML;
   var enlaces = xmlDocumento.getElementsByTagName("enlace");

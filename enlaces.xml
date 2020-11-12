@@ -1,5 +1,10 @@
 <enlaces>
 
+<!--
+  En este XML creamos una colección de elementos enlace que contienen pares url y descripcion. De esta forma el contenido mostrado en el grid principal resulta
+  fácil de actualizar sin tener siquiera que meterse en código. Estos datos se muestran en página.html mediante AJAX.
+-->
+
 <enlace>
   <url>http://tel.uva.es</url>
   <descripcion>Pagina web principal de Teleco</descripcion>
